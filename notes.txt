@@ -1,0 +1,6 @@
+int a[155] = {1, 2, 3}; // This would initialize any remaining elements to 0
+but simply int a[155] would initialize the elements with some garbage value
+
+When we pass an array to a function, it is passed as a pointer by default. Thus, we should never calculate the size of the array inside a function by using sizeof(a) / sizeof(a[0]) OR sizeof(int) because it will evaluate to the size of the pointer, and the size of a pointer variable is 8 bytes.
+
+Thus, pass by reference by default.
